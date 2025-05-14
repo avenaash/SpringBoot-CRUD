@@ -1,0 +1,47 @@
+!SESSION 2025-04-03 11:01:23.992 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=24
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.osgi 4 0 2025-04-03 11:01:27.253
+!MESSAGE Application error
+!STACK 1
+java.lang.IllegalStateException: The platform metadata area could not be written: C:\Program Files\Java\jdk-24\mat\workspace\.metadata.  By default the platform writes its content
+under the current working directory when the platform is launched.  Use the -data parameter to
+specify a different content area for the platform.
+	at org.eclipse.core.internal.runtime.DataArea.assertLocationInitialized(DataArea.java:76)
+	at org.eclipse.core.internal.runtime.DataArea.getStateLocation(DataArea.java:146)
+	at org.eclipse.core.internal.preferences.InstancePreferences.getBaseLocation(InstancePreferences.java:43)
+	at org.eclipse.core.internal.preferences.SingletonEclipsePreferences.initializeChildren(SingletonEclipsePreferences.java:97)
+	at org.eclipse.core.internal.preferences.SingletonEclipsePreferences.<init>(SingletonEclipsePreferences.java:37)
+	at org.eclipse.core.internal.preferences.InstancePreferences.<init>(InstancePreferences.java:57)
+	at org.eclipse.core.internal.preferences.InstancePreferences.internalCreate(InstancePreferences.java:64)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:364)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:352)
+	at org.eclipse.core.internal.preferences.PreferencesService.createNode(PreferencesService.java:354)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.getOrCreate(EclipsePreferences.java:1161)
+	at org.eclipse.core.internal.preferences.RootPreferences.getNode(RootPreferences.java:65)
+	at org.eclipse.core.internal.preferences.RootPreferences.node(RootPreferences.java:53)
+	at org.eclipse.core.internal.preferences.AbstractScope.getNode(AbstractScope.java:38)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getStorePreferences(ScopedPreferenceStore.java:213)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.<init>(ScopedPreferenceStore.java:127)
+	at org.eclipse.ui.plugin.AbstractUIPlugin.getPreferenceStore(AbstractUIPlugin.java:254)
+	at org.eclipse.ui.internal.UIPlugin$1.getPreferenceStore(UIPlugin.java:93)
+	at org.eclipse.ui.internal.util.PrefUtil.getAPIPreferenceStore(PrefUtil.java:74)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:571)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:570)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.mat.ui.rcp.Application.start(Application.java:28)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
